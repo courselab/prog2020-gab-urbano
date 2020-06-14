@@ -25,9 +25,17 @@
 
 /* Return the determinant of a 3x3 integer matrix.*/
 
-int determinant (int m[3][3])
+int determinant (int a[3][3])
 {
-  return 0;
+  int det;
+  det = a[0][0] * a[1][1] * a[2][2];
+  det = det + a[0][1] * a[1][2] * a[2][0];
+  det = det + a[0][2] * a[1][0] * a[2][1];
+  det = det - a[0][2] * a[1][1] * a[2][0];
+  det = det - a[0][0] * a[1][2] * a[2][1];
+  det = det - a[0][1] * a[1][0] * a[2][2];  
+
+  return det;
 }
 
 

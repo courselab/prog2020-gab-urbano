@@ -30,6 +30,7 @@
 int decimal (char *b)
 {
   
+  
   return 0;
 }
 
