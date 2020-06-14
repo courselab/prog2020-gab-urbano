@@ -26,7 +26,7 @@ int is_prime (int a)
   int prime = 1;
 
   for(int i = a - 1; i > 1; i--){
-    if(a % i == 0){
+    if(a % i == 0){ //comentário
       prime = 0;
     }
   }
