@@ -25,12 +25,17 @@ int is_prime (int a)
 {
   int prime = 1;
 
-  for(int i = a - 1; i > 1; i--){
-    if(a % i == 0){ //comentário
-      prime = 0;
+  if(a <= 0){
+    prime = 0;
+  }
+  else{
+    for(int i = a - 1; i > 1; i--){
+      if(a % i == 0){
+        prime = 0;
+      }
     }
   }
-  
+
   return prime;
 }
 
