@@ -25,8 +25,6 @@
 
 int pitagorean (char *s)
 {
-  
-  
   return 0;
 }
 
