@@ -25,7 +25,7 @@ int is_prime (int a)
 {
   int prime = 1;
 
-  if(a <= 0){
+  if(a <= 1){
     prime = 0;
   }
   else{
