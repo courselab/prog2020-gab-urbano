@@ -2,7 +2,7 @@
 
    This program reads N<=100 numbers passed as command line
    arguments and ouputs them in ascending order. Choose the
-   sorting algorithm of your preference (see bellow).
+   sorting algorithm of your preference (see below).
 
    E.g.
 
@@ -23,8 +23,17 @@
 
 /* Sort the first 'n' integers values in 'vector'. */
 
+void swap(int a, int b){
+  int temp;
+  temp = a;
+  a = b;
+  b = temp; 
+}
+
 void sort (int* vector, int n)
 {
+
+
 }
 
 #define USAGE "m009 <num1> <nun2> ... \n"

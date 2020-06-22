@@ -22,6 +22,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>//StackOverflow is the second step towards becoming a programmer 
+#include <string.h>
 
 #define MAX 256
 
@@ -30,9 +32,32 @@
 
 void lastname (char *s)
 {
+  int l = strlen(s) - 2;  //índice do ultimo caractere válido
+  int a = 0;        //indice do ultimo espaço
+  int i;
+  int j = 0;
+
+  char lastName[MAX]; 
+  char fullName[MAX];
+
+  i = l;
+  while(s[i] != 32){
+    a = i - 1;
+    i--;    
+  }
+
+  for(i = a + 1; s[i + 1] != 0; i++){
+    lastName[j] = toupper(s[i]);
+    s[i] = 0;
+    j++;
+  }
+
+  strcat (fullName, lastName);
+  strcat (fullName, ", ");
+  strcat (fullName, s);
+
+  strcpy (s, fullName);
 }
-
-
 
 /* Do not edit this function. */
 
