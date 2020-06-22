@@ -21,6 +21,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 #define MAX 256
 
@@ -30,17 +31,14 @@ int lettercount (char *s)
 {
   int nc = 0;
 
-  for(int i = 1; s[i] != 0; i++){
-    if(s[i] != 32){
+  for(int i = 0; s[i] != 0; i++){
+    if(isalpha(s[i]) != 0){
     nc++;
     }
   }
 
   return nc;
 }
-
-
-
 
 /* Do not edit this function. */
 
