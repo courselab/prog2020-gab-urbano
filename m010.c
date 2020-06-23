@@ -30,7 +30,61 @@ enum {sun, mon, tue, wed, thu, fri, sat};
 
 int day_of_week (int day, int month)
 {
-  return sun;
+  int firstDay;
+
+  switch(month){
+    case 1:
+      firstDay = 2;
+    break;
+    
+    case 2:
+      firstDay = 5;
+    break;
+
+    case 3:
+      firstDay = 6;
+    break;
+
+    case 4:
+      firstDay = 2;
+    break;
+
+    case 5:
+      firstDay = 4;
+    break;
+
+    case 6:
+      firstDay = 0;
+    break;
+
+    case 7:
+      firstDay = 2;
+    break;
+
+    case 8:
+      firstDay = 5;
+    break;
+
+    case 9:
+      firstDay = 1;
+    break;
+
+    case 10:
+      firstDay = 3;
+    break;
+
+    case 11:
+      firstDay = 6;
+    break;
+
+    case 12:
+      firstDay = 1;
+    break;
+  }
+
+  int weekDay = (day + firstDay) % 7;
+  
+  return weekDay;
 }
 
 /* Do not edit function main. */

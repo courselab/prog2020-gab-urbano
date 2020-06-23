@@ -43,19 +43,6 @@ void sort (int* vector, int n)
       }
     }
   }
-/*
-  for(k = 0; k <= n; k++){
-
-    min = vector[k];
-    
-    for(j = k; vector[j] < min; j++){
-      temp = min;
-      min = vector[j];
-      vector[j] = temp;
-      vector[k] = min;
-    }
-  }
-*/  
 }
 
 #define USAGE "m009 <num1> <nun2> ... \n"
