@@ -44,9 +44,10 @@ int wordcount (char *filename)
     if(isalpha(n) == 0){
       state = OUT;
     }
-    else if(state == OUT){
-      state = IN;
-      numWord++;
+    else 
+      if(state == OUT){
+        state = IN;
+        numWord++;
     }
   }
 
