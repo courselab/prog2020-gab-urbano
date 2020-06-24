@@ -27,14 +27,14 @@
 #define USAGE "m011 <filename>\n"
 #define IN 1
 #define OUT 0
-#define MAX 256
+#define MAX 1024
 
 /* Return the number of words in ascii text file 'filename'.*/
 
 int wordcount (char *filename) 
 {
   //WIP
-
+  FILE *fp;
   fp = fopen(filename, "r");
 
   int state, numWord = 0, n;
