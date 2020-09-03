@@ -21,14 +21,37 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
 
 #define USAGE "m011 <filename>\n"
+#define IN 1
+#define OUT 0
+#define MAX 1024
 
 /* Return the number of words in ascii text file 'filename'.*/
 
-int wordcount (char *filename)
+int wordcount (char *filename) 
 {
-  return 0;
+  //WIP
+  FILE *fp;
+  fp = fopen(filename, "r");
+
+  int state, numWord = 0, n;
+  
+  state = OUT;
+  while((n = getc(fp)) != EOF){
+    if(isalpha(n) == 0){
+      state = OUT;
+    }
+    else 
+      if(state == OUT){
+        state = IN;
+        numWord++;
+    }
+  }
+
+  return numWord;
 }
 
 /* Do not edit function main. */

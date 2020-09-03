@@ -21,6 +21,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 #define MAX 256
 
@@ -28,10 +29,16 @@
 
 int lettercount (char *s)
 {
-  return 0;
+  int nc = 0;
+
+  for(int i = 0; s[i] != 0; i++){
+    if(isalpha(s[i]) != 0){
+    nc++;
+    }
+  }
+
+  return nc;
 }
-
-
 
 /* Do not edit this function. */
 
@@ -43,7 +50,7 @@ int main (int argc, char **argv)
   fgets (name, MAX-1, stdin);
   
   n = lettercount (name);
-
+  
   printf ("%d\n", n);
   
   return 0;
